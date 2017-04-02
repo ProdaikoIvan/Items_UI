@@ -1,0 +1,26 @@
+<left-menu></left-menu>
+
+<div class="conteiner">
+
+    <div class="container-items">
+        <div class="container-items__header">
+            <h1 class="items-header">Items</h1>
+        </div>
+        <form class="addNewItemForm" ng-submit="vm.addItem()">
+            <input type="text" ng-model="vm.newItemInput.item" placeholder="Type name here...">
+            <button type="submit">Add new</button>
+        </form>
+
+        <ul class="items-list">
+            <li class="items-list-item" ng-class="{ 'active-item': $index == vm.selectedIndex }" ng-repeat="item in vm.listItems track by $index">
+                <div class="item-block-list" ng-click="vm.selectItem(this.$index)">
+                    <span class="text-item">{{item.item}}</span>
+                    <span class="comments-count">{{item.comments.length}}</span>
+                    <button class="delete-item-btn" ng-click="vm.deleteItem(this.$index)">Delete</button>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+    <comments></comments>
+</div>

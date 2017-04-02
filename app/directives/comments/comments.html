@@ -1,0 +1,23 @@
+<div class="container-comments">
+    <div class="container-items__comments">
+        <h1 class="items-comments">Comments <span class="num-comments" ng-show="vm.numItem">#{{vm.numItem}}</span></h1>
+    </div>
+    <ul class="comments-list">
+            <li class="comments-list-item" ng-repeat="comment in vm.comments  track by $index">
+                <div class="cell-ava">
+                    <!--<img src="" alt="" class="people-ava">-->
+                 </div>
+                <div class="comments-text__item">{{comment}}</div>
+            </li>
+            <li class="cell-addComments">
+                <div class="cell-ava">
+                    <!--<img src="" alt="" class="people-ava">-->
+                </div>
+                <div class="cell-add-comments">
+                    <form class="add-comments__form">
+                        <textarea ng-disabled="vm.disabled" ng-enter="vm.addComments()" ng-model="vm.addCommentsInput"  class="add-comments__input"></textarea>
+                    </form>
+                </div>
+            </li>
+        </ul>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test UI</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./content/style/main.css">
+</head>
+<body>
+
+    <ui-view></ui-view>
+
+    <!--libs-->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="libs/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <!--app-->
+    <script src="app.js"></script>
+    <script src="app.config.js"></script>
+
+    <!--services-->
+    <script src="services/localStorage/localStorage.factory.js"></script>
+    <script src="services/temp/temp.js"></script>
+
+    <!--templates-->
+    <script src="templates/items/ItemsCtrl.js"></script>
+
+    <!--directives-->
+    <script src="directives/main/main.directeve.js"></script>
+    <script src="directives/main/Main.Ctrl.js"></script>
+    <script src="directives/comments/comments.directive.js"></script>
+    <script src="directives/comments/Comments.Ctrl.js"></script>
+    <script src="directives/ngEnter/ngEnter.js"></script>
+</body>
+</html>
